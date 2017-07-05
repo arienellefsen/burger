@@ -1,3 +1,7 @@
+//var path = require('path');
+var mysql = require("mysql");
+var connection;
+
 var connection = mysql.createConnection({
     host: "localhost",
     user: "root",

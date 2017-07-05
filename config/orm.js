@@ -1,6 +1,9 @@
-var orm = require('connection');
+//var path = require('path');
+var connection = require('../config/connection.js');
+
+
 //create an object
-var ormConnection = {
+var orm = {
     firstName: "John",
     lastName: "Doe",
     age: 50,
@@ -11,4 +14,4 @@ var ormConnection = {
 //insertOne();
 //updateOne();
 
-module.exports = ormConnections;
+module.exports = orm;
