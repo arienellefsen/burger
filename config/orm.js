@@ -1,16 +1,21 @@
-//var path = require('path');
+var path = require('path');
 var connection = require('../config/connection.js');
-
-
 //create an object
+
 var orm = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50,
-    eyeColor: "blue"
+    selectAll: function() {
+        connection.query("SELECT * FROM burgers", function(err, data) {
+            if (err) {
+                console.log(err);
+            }
+            data.forEach(function(index) {
+                console.log(index);
+                return index;
+            });
+        });
+    }
 };
 
-//selectAll();
 //insertOne();
 //updateOne();
 

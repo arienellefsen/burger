@@ -1,10 +1,10 @@
 //Import files:
 //orm.js
-var ormConnections = require('../config/orm.js');
-
+var orm = require('../config/orm.js');
 var burger = {
-    name: 'ana',
-    test: 'test1'
+    all: function() {
+        orm.selectAll();
+    }
 };
 
 module.exports = burger;
