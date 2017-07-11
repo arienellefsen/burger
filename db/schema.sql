@@ -1,5 +1,5 @@
 CREATE TABLE `burgers` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) AUTO_INCREMENT NOT NULL,
   `burger_name` varchar(255) NOT NULL,
   `devoured` tinyint(1) DEFAULT NULL,
   `date` datetime(6) DEFAULT NULL,
