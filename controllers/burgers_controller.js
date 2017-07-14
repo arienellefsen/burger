@@ -5,7 +5,8 @@ var burger = require('../models/burger.js');
 router.get('/', function(req, res) {
     burger.all(function(data) {
         var hbsObject = {
-            burgers: data
+            burgers: data,
+
         };
         console.log(hbsObject);
         res.render("index", hbsObject);
@@ -13,8 +14,9 @@ router.get('/', function(req, res) {
 });
 
 router.post("/", function(req, res) {
+    
     burger.create(["burger_name"], [req.body.name],
-        function() {
+        function(alert) {
             res.redirect("/");
         });
 });

@@ -1,7 +1,12 @@
-CREATE TABLE `burgers` (
-  `ID` int(11) AUTO_INCREMENT NOT NULL,
-  `burger_name` varchar(255) NOT NULL,
-  `devoured` tinyint(1) DEFAULT NULL,
-  `date` datetime(6) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE DATABASE burgers_db;
+
+USE burgers_db;
+
+CREATE TABLE burgers (
+	id INT AUTO_INCREMENT NOT NULL,
+	burger_name VARCHAR(100) NOT NULL,
+	devoured BOOLEAN DEFAULT false,
+	date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY(id)
+
+)

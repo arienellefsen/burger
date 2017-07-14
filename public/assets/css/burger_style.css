@@ -4,11 +4,12 @@ h1 {
     font-size: 24px;
 }
 
-.center {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+.devour{
+	float: right;
+}
+
+ul.burgers li{
+	list-style:none;
+	    margin-top: 20px;
+	  
 }
