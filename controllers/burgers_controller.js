@@ -5,7 +5,7 @@ var burger = require('../models/burger.js');
 router.get('/', function(req, res) {
     burger.all(function(data) {
         var hbsObject = {
-            burgers: data,
+            burgers123: data,
 
         };
         console.log(hbsObject);
@@ -14,10 +14,11 @@ router.get('/', function(req, res) {
 });
 
 router.post("/", function(req, res) {
-    
+    console.log(req.body);
     burger.create(["burger_name"], [req.body.name],
         function(alert) {
             res.redirect("/");
+
         });
 });
 router.put("/:id", function(req, res) {
@@ -25,7 +26,7 @@ router.put("/:id", function(req, res) {
     console.log("condition", condition);
     burger.update({
         devoured: req.body.devoured
-    }, condition, function() {
+    },  condition, function() {
         res.redirect("/");
     });
 });

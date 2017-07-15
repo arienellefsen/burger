@@ -14,12 +14,12 @@
         <div class="col-sm-4 col-md-4">
             <h2>Burgers to eat:</h2>
             <ul class="burgers">
-                {{#each burgers}}
+                {{#each burgers123}}
                 {{#unless this.devoured}}
                 <li>
                     {{this.burger_name}}
                     <form action="/{{this.id}}?_method=PUT" method="POST" class="devour">
-                        <input type="hidden" name="devoured" value="true">
+                        <input type="hidden" name="devoured" value="true" id="sub">
                         <button type="submit">Devour!</button>
                     </form>
                     {{this.alert}}
@@ -32,7 +32,7 @@
         <div class="col-sm-4 col-md-4">
             <h2> Burgers deleted:</h2>
            <table class="table table-striped table-bordered">
-                {{#each burgers}}
+                {{#each burgers123}}
                     {{#if this.devoured}}
                         <tr>
                             <td>
@@ -44,4 +44,13 @@
             </table>
         </div>
      </div>
+
  </div>
+
+ <script>
+
+var data = document.getElementById("sub").value;
+
+console.log(data);
+
+ </script>
